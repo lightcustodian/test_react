@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction Patterns - Logical Front Design System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design-system.css">
+    <style>
+        .doc-section { margin-bottom: 80px; border-bottom: 2px solid var(--color-bg-tertiary); padding-bottom: 40px; }
+        .doc-header { background: linear-gradient(135deg, var(--color-primary-blue) 0%, var(--color-primary-green) 100%); color: white; padding: 60px 0; margin-bottom: 60px; }
+        .doc-title { font-size: var(--font-size-h1); margin-bottom: 16px; }
+        .doc-subtitle { font-size: var(--font-size-body-lg); opacity: 0.9; }
+        .pattern-demo { border: 2px dashed var(--color-bg-tertiary); border-radius: var(--radius-lg); margin: 24px 0; padding: 24px; }
+        .pattern-info { background: var(--color-light-blue); padding: 16px 20px; border-left: 4px solid var(--color-primary-blue); margin: 20px 0; }
+        .code-block { background: #f8f9fa; padding: 16px; border-radius: var(--radius-md); margin: 16px 0; font-family: var(--font-family-mono); font-size: 0.875rem; }
+        .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg); margin: var(--space-lg) 0; }
+        .interaction-demo { margin: var(--space-lg) 0; }
+    </style>
+</head>
+<body>
+    <div class="doc-header">
+        <div class="container">
+            <h1 class="doc-title">Interaction Patterns</h1>
+            <p class="doc-subtitle">Hover effects and animations that create engaging user experiences</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Primary Card Hover System -->
+        <section class="doc-section">
+            <h2 class="h2">Primary Card Hover System</h2>
+            <div class="pattern-info">
+                <strong>Universal Pattern:</strong> All interactive cards use <code>.card-interactive</code> with <code>translateY(-8px) scale(1.02)</code> + strategic Blue↔Green color transitions
+            </div>
+            
+            <div class="pattern-demo">
+                <h4>Standard Implementation</h4>
+                <div class="demo-grid">
+                    <div class="card-elevated card-interactive">
+                        <div class="icon-circle icon-trust">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>Cost Savings</h4>
+                        <p class="body-text">33% reduction in infrastructure costs</p>
+                    </div>
+                    
+                    <div class="card-feature card-interactive">
+                        <div class="card-feature-icon icon-expertise">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Private Cloud</h4>
+                        <p class="body-text">Enterprise-grade infrastructure</p>
+                    </div>
+                    
+                    <div class="card-value card-interactive">
+                        <div class="icon-circle icon-growth">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Scalable Growth</h4>
+                        <p class="supporting-text">Infrastructure that grows with you</p>
+                    </div>
+                </div>
+                
+                <div class="code-block">
+                    .card-interactive {<br>
+                    &nbsp;&nbsp;transition: all var(--transition-base);<br>
+                    &nbsp;&nbsp;cursor: pointer;<br>
+                    }<br><br>
+                    .card-interactive:hover {<br>
+                    &nbsp;&nbsp;transform: translateY(-8px) scale(1.02);<br>
+                    &nbsp;&nbsp;box-shadow: var(--shadow-hover);<br>
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Color Transitions -->
+        <section class="doc-section">
+            <h2 class="h2">Strategic Color Transitions</h2>
+            <div class="pattern-info">
+                <strong>Business Logic:</strong> Icon colors transition between Blue (trust/expertise) and Green (growth/innovation) to reinforce messaging
+            </div>
+            
+            <div class="pattern-demo">
+                <h4>Icon Transition Patterns</h4>
+                <div class="interaction-demo">
+                    <h5>Trust Icons (Green → Blue)</h5>
+                    <div style="display: flex; gap: var(--space-lg); align-items: center;">
+                        <div class="card-interactive" style="padding: var(--space-md); border: 1px solid var(--color-bg-tertiary); border-radius: var(--radius-md);">
+                            <div class="icon-circle icon-trust">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                        <span>→ Hover to see Blue transition</span>
+                    </div>
+                </div>
+                
+                <div class="interaction-demo">
+                    <h5>Expertise Icons (Blue → Green)</h5>
+                    <div style="display: flex; gap: var(--space-lg); align-items: center;">
+                        <div class="card-interactive" style="padding: var(--space-md); border: 1px solid var(--color-bg-tertiary); border-radius: var(--radius-md);">
+                            <div class="icon-circle icon-expertise">
+                                <i class="fas fa-unlock"></i>
+                            </div>
+                        </div>
+                        <span>→ Hover to see Green transition</span>
+                    </div>
+                </div>
+                
+                <div class="code-block">
+                    /* Icon color transitions triggered by CARD hover */<br>
+                    .card-interactive:hover .icon-trust {<br>
+                    &nbsp;&nbsp;background: var(--color-bg-blue);  /* Green → Blue */<br>
+                    }<br><br>
+                    .card-interactive:hover .icon-expertise {<br>
+                    &nbsp;&nbsp;background: var(--color-bg-green); /* Blue → Green */<br>
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Button Interactions -->
+        <section class="doc-section">
+            <h2 class="h2">Button Interactions</h2>
+            <div class="pattern-info">
+                <strong>Consistent Feedback:</strong> All buttons provide clear hover feedback with subtle elevation and color shifts
+            </div>
+            
+            <div class="pattern-demo">
+                <h4>Button States</h4>
+                <div style="display: flex; gap: var(--space-lg); flex-wrap: wrap; align-items: center;">
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                    <button class="btn btn-primary btn-lg">Large Button</button>
+                </div>
+                
+                <div class="code-block">
+                    .btn-primary:hover {<br>
+                    &nbsp;&nbsp;background: var(--color-dark-green);<br>
+                    &nbsp;&nbsp;transform: translateY(-2px);<br>
+                    &nbsp;&nbsp;box-shadow: var(--shadow-md);<br>
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Guidelines -->
+        <section class="doc-section">
+            <h2 class="h2">Implementation Guidelines</h2>
+            
+            <div class="pattern-info">
+                <strong>DO:</strong> Use <code>.card-interactive</code> for 90%+ of interactive cards | Apply consistent timing with <code>var(--transition-base)</code> | Follow strategic color mapping
+            </div>
+            
+            <div class="pattern-info" style="background: var(--color-light-green); border-left-color: var(--color-primary-green);">
+                <strong>DON'T:</strong> Mix different hover patterns | Use hardcoded transition values | Apply transitions to non-interactive elements
+            </div>
+            
+            <div class="pattern-demo">
+                <h4>Transition Timing</h4>
+                <div class="code-block">
+                    :root {<br>
+                    &nbsp;&nbsp;--transition-fast: 150ms ease;<br>
+                    &nbsp;&nbsp;--transition-base: 300ms ease;<br>
+                    &nbsp;&nbsp;--transition-slow: 500ms ease;<br>
+                    }<br><br>
+                    /* Use base timing for most interactions */<br>
+                    .card-interactive {<br>
+                    &nbsp;&nbsp;transition: all var(--transition-base);<br>
+                    }
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

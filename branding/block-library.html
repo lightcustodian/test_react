@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Library - Logical Front Design System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design-system.css">
+    <style>
+        .doc-section {
+            margin-bottom: 80px;
+            border-bottom: 2px solid var(--color-bg-tertiary);
+            padding-bottom: 40px;
+        }
+        .doc-header {
+            background: linear-gradient(135deg, var(--color-primary-blue) 0%, var(--color-primary-green) 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+        .doc-title {
+            font-size: var(--font-size-h1);
+            margin-bottom: 16px;
+        }
+        .doc-subtitle {
+            font-size: var(--font-size-body-lg);
+            opacity: 0.9;
+        }
+        .block-example {
+            border: 2px dashed var(--color-bg-tertiary);
+            border-radius: var(--radius-lg);
+            margin: 24px 0;
+            overflow: hidden;
+        }
+        .block-label {
+            background: var(--color-bg-tertiary);
+            padding: 12px 20px;
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text-primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .block-purpose {
+            background: var(--color-light-blue);
+            padding: 16px 20px;
+            border-left: 4px solid var(--color-primary-blue);
+            margin: 20px 0;
+        }
+        .usage-note {
+            background: var(--color-light-green);
+            padding: 12px 16px;
+            border-left: 4px solid var(--color-primary-green);
+            margin: 16px 0;
+            font-size: var(--font-size-body-sm);
+        }
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-lg) 0;
+        }
+        .component-example {
+            padding: var(--space-md);
+            border: 1px solid var(--color-bg-tertiary);
+            border-radius: var(--radius-md);
+        }
+        .component-name {
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-primary-blue);
+            margin-bottom: var(--space-sm);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="doc-header">
+        <div class="container">
+            <h1 class="doc-title">Block Library</h1>
+            <p class="doc-subtitle">Production-ready page building blocks with real content from the ComponentRegistry</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Blocks Section -->
+        <section class="doc-section">
+            <h2 class="h2">Hero Blocks</h2>
+            <p class="lead-text">Primary page headers that capture attention and communicate value</p>
+            
+            <div class="block-purpose">
+                <strong>Purpose:</strong> Hero blocks establish page context, communicate key messages, and guide users toward primary actions. Used on homepages, landing pages, and major section introductions.
+            </div>
+
+            <!-- Main Hero -->
+            <div class="block-example">
+                <div class="block-label">
+                    <span>Main Hero Block</span>
+                    <span class="supporting-text">Full-featured homepage hero with stats and dual CTAs</span>
+                </div>
+                
+    
+      <style>
+        .hero {
+          padding: 8rem 0;
+          text-align: center;
+          color: white;
+          position: relative;
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+          overflow: hidden;
+        }
+        
+        .hero::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: 
+            radial-gradient(circle at 30% 20%, rgba(75, 183, 78, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 70% 80%, rgba(18, 94, 173, 0.15) 0%, transparent 50%);
+          animation: heroGlow 8s ease-in-out infinite alternate;
+        }
+        
+        @keyframes heroGlow {
+          0% { opacity: 0.3; }
+          100% { opacity: 0.7; }
+        }
+        
+        .hero-content {
+          position: relative;
+          z-index: 2;
+        }
+        
+        .hero h1 {
+          font-size: 4.5rem;
+          font-weight: 800;
+          margin-bottom: 2rem;
+          background: linear-gradient(135deg, #4BB74E, #125EAD);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-shadow: 0 0 30px rgba(75, 183, 78, 0.3);
+          animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+          0% { text-shadow: 0 0 30px rgba(75, 183, 78, 0.3); }
+          100% { text-shadow: 0 0 40px rgba(18, 94, 173, 0.4); }
+        }
+        
+        .hero p {
+          font-size: 1.4rem;
+          margin-bottom: 3rem;
+          color: #ffffff;
+          opacity: 1.0;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          line-height: 1.8;
+        }
+        
+        .hero-stats {
+          display: flex;
+          justify-content: center;
+          gap: 3rem;
+          margin: 3rem 0;
+          flex-wrap: wrap;
+        }
+        
+        .stat-item {
+          text-align: center;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 2rem 1.5rem;
+          border-radius: 15px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          transition: all 0.3s ease;
+          min-width: 200px;
+          width: 200px;
+          height: 140px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .stat-item:hover {
+          transform: translateY(-5px);
+          background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .stat-number {
+          font-size: 2.5rem;
+          font-weight: 800;
+          color: #4BB74E;
+          display: block;
+        }
+        
+        .stat-label {
+          font-size: 0.9rem;
+          opacity: 0.8;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        
+        .cta-buttons {
+          display: flex;
+          gap: 1.5rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 2rem;
+        }
+      </style>
+    
+    <!-- Higher Ed Style Hero Component - EXACT COPY FROM OLD VERSION -->
+    <section class="hero" style="background-image: linear-gradient(135deg, rgba(10, 15, 28, 0.85), rgba(18, 94, 173, 0.7)), url('/media/earth_space_hero.jpg');">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Higher Education IT Solutions That Scale</h1>
+          <p>Get enterprise-grade performance with FERPA compliance at 33% less cost than public cloud. Trusted by universities serving 600K+ students nationwide with Arkansas AR-EON network advantage.</p>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+        <span class="stat-number">20K+</span>
+        <span class="stat-label">Students at UAMS</span>
+      </div><div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">FERPA Compliant</span>
+      </div><div class="stat-item">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Expert Support</span>
+      </div>
+          </div>
+          
+          <div class="cta-buttons">
+            <a href="/contact" class="btn-primary">
+              <i class="fas fa-calendar-check"></i> Schedule Higher Ed Consultation
+            </a>
+            <a href="/case-study-uams" class="btn-secondary">
+              <i class="fas fa-info-circle"></i> View UAMS Success Story
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+            </div>
+            <div class="usage-note">
+                <strong>Usage:</strong> Primary homepage hero, major landing pages, campaign pages
+            </div>
+
+            <!-- Mini Hero -->
+            <div class="block-example">
+                <div class="block-label">
+                    <span>Mini Hero Block</span>
+                    <span class="supporting-text">Simplified hero for inner pages and section headers</span>
+                </div>
+                
+    <!-- Mini Hero Component -->
+    <section class="block-hero" style="background-image: linear-gradient(135deg, rgba(10, 15, 28, 0.85), rgba(18, 94, 173, 0.7)), url('/media/earth_space_hero.jpg'); background-attachment: fixed; background-size: cover; background-position: center; padding: 4rem 0;">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-headline" style="font-size: var(--font-size-h1);">About Our Solutions</h1>
+          <p style="font-size: 1.2rem; margin-bottom: 3rem; color: #ffffff; opacity: 1.0; max-width: 600px; margin-left: auto; margin-right: auto;">Learn more about our infrastructure approach</p>
+          <a href="/contact" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
+      </div>
+    </section>
+    
+            </div>
+            <div class="usage-note">
+                <strong>Usage:</strong> About pages, service pages, blog headers, solution detail pages
+            </div>
+        </section>
+
+        <!-- Solutions Blocks Section -->
+        <section class="doc-section">
+            <h2 class="h2">Solutions Showcase Blocks</h2>
+            <p class="lead-text">Present infrastructure solutions with features and benefits</p>
+            
+            <div class="block-purpose">
+                <strong>Purpose:</strong> Showcase specific solutions, services, or products with detailed feature lists and clear value propositions. Support customer decision-making process.
+            </div>
+
+            <div class="block-example">
+                <div class="block-label">
+                    <span>Two-Column Solutions</span>
+                    <span class="supporting-text">Detailed solutions with feature lists and interactive cards</span>
+                </div>
+                
+    <!-- 2-Column Solutions Component -->
+    <section class="block-solutions">
+      <div class="container">
+        <h2 class="h2" style="text-align: center; margin-bottom: var(--space-sm);">Proven Infrastructure Solutions</h2>
+        <p class="lead-text" style="text-align: center; margin-bottom: var(--space-2xl);">Enterprise-grade solutions with guaranteed performance and cost savings</p>
+        <div class="grid-2">
+          <div class="card-feature card-interactive">
+        <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-lg);">
+          <div class="card-feature-icon icon-expertise">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3 class="h4" style="color: var(--color-text-blue); margin: 0;">Private Cloud Infrastructure</h3>
+        </div>
+        <p class="body-text" style="margin-bottom: var(--space-md);">Enterprise-grade private cloud with 99.9% uptime SLA and Arkansas AR-EON advantage.</p>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: var(--space-xs);"><i class="fas fa-check" style="color: var(--color-text-green); margin-right: var(--space-xs);"></i>99.9% uptime SLA with penalties</li><li style="margin-bottom: var(--space-xs);"><i class="fas fa-check" style="color: var(--color-text-green); margin-right: var(--space-xs);"></i>Arkansas AR-EON network advantage</li><li style="margin-bottom: var(--space-xs);"><i class="fas fa-check" style="color: var(--color-text-green); margin-right: var(--space-xs);"></i>24/7 monitoring and support</li><li style="margin-bottom: var(--space-xs);"><i class="fas fa-check" style="color: var(--color-text-green); margin-right: var(--space-xs);"></i>Disaster recovery included</li>
+        </ul>
+      </div><div class="card-feature card-interactive">
+        <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-lg);">
+          <div class="card-feature-icon icon-expertise">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3 class="h4" style="color: var(--color-text-blue); margin: 0;">On-Premise Hardware & Support</h3>
+        </div>
+        <p class="body-text" style="margin-bottom: var(--space-md);">Modern on-premise infrastructure with enterprise hardware and full lifecycle support.</p>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: var(--space-xs);"><i class="fas fa-check" style="color: var(--color-text-green); margin-right: var(--space-xs);"></i>Enterprise-grade hardware</li><li style="margin-bottom: var(--space-xs);"><i class="fas fa-check" style="color: var(--color-text-green); margin-right: var(--space-xs);"></i>Full lifecycle support</li><li style="margin-bottom: var(--space-xs);"><i class="fas fa-check" style="color: var(--color-text-green); margin-right: var(--space-xs);"></i>Seamless cloud integration</li><li style="margin-bottom: var(--space-xs);"><i class="fas fa-check" style="color: var(--color-text-green); margin-right: var(--space-xs);"></i>Predictable costs</li>
+        </ul>
+      </div>
+        </div>
+      </div>
+    </section>
+    
+            </div>
+            <div class="usage-note">
+                <strong>Usage:</strong> Solutions overview pages, service detail pages, comparison sections
+            </div>
+        </section>
+
+        <!-- Value Proposition Blocks Section -->
+        <section class="doc-section">
+            <h2 class="h2">Value Proposition Blocks</h2>
+            <p class="lead-text">Communicate competitive advantages and key benefits</p>
+            
+            <div class="block-purpose">
+                <strong>Purpose:</strong> Highlight competitive advantages, build trust, address customer concerns, and differentiate from competitors.
+            </div>
+
+            <div class="block-example">
+                <div class="block-label">
+                    <span>Four-Column Value Props</span>
+                    <span class="supporting-text">Strategic benefits with intelligent icon mapping</span>
+                </div>
+                
+    <!-- 4-Column Value Props Component -->
+    <section class="block-values">
+      <div class="container">
+        <h2 class="h2" style="text-align: center; margin-bottom: var(--space-sm);">Why Choose Logical Front</h2>
+        <p class="lead-text" style="text-align: center; margin-bottom: var(--space-2xl);">The advantages that set us apart from other infrastructure providers</p>
+        <div class="grid-4">
+          
+        <div class="card-value card-interactive">
+          <div class="icon-circle icon-trust">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h4 class="h4">Lower Total Cost</h4>
+          <p class="supporting-text">Save 33% vs public cloud with transparent, predictable pricing</p>
+        </div>
+      
+        <div class="card-value card-interactive">
+          <div class="icon-circle icon-expertise">
+            <i class="fas fa-unlock"></i>
+          </div>
+          <h4 class="h4">No Vendor Lock-In</h4>
+          <p class="supporting-text">Maintain complete control of your infrastructure</p>
+        </div>
+      
+        <div class="card-value card-interactive">
+          <div class="icon-circle icon-innovation">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4 class="h4">Arkansas Support</h4>
+          <p class="supporting-text">Local team with regional expertise and 24/7 availability</p>
+        </div>
+      
+        <div class="card-value card-interactive">
+          <div class="icon-circle icon-growth">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4 class="h4">Scalable Growth</h4>
+          <p class="supporting-text">Infrastructure that grows seamlessly with your organization</p>
+        </div>
+      
+        </div>
+      </div>
+    </section>
+    
+            </div>
+            <div class="usage-note">
+                <strong>Usage:</strong> Homepage benefits section, about page, comparison pages, landing pages
+            </div>
+        </section>
+
+        <!-- Testimonial Blocks Section -->
+        <section class="doc-section">
+            <h2 class="h2">Social Proof Blocks</h2>
+            <p class="lead-text">Customer testimonials and success stories</p>
+            
+            <div class="block-purpose">
+                <strong>Purpose:</strong> Build credibility through customer testimonials, reduce purchase anxiety, provide social proof for decision-making.
+            </div>
+
+            <div class="block-example">
+                <div class="block-label">
+                    <span>Testimonial Cards</span>
+                    <span class="supporting-text">Customer stories with avatars and company details</span>
+                </div>
+                
+    <!-- Card-style Testimonials Component -->
+    <section style="background: white; padding: 80px 0;">
+      <div class="container">
+        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: #125EAD; font-weight: 700;">What Our Customers Say</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+          
+    <div class="hover-card" style="background: #fff; color: #333; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+      transition: all 0.3s ease;
+      cursor: pointer;
+    " onmouseover="
+      this.style.transform='translateY(-10px)';
+      this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';
+      
+    " onmouseout="
+      this.style.transform='translateY(0)';
+      this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';
+    ">
+      
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div class="avatar-circle" style="width: 60px; height: 60px; background: #125EAD; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#4BB74E';" onmouseout="this.style.backgroundColor='#125EAD';">
+            <i class="fas fa-user" style="color: white; font-size: 24px;"></i>
+          </div>
+          <div>
+            <strong style="font-size: 1.1rem;">Sarah Johnson</strong><br>
+            <small style="color: #666;">CTO, Arkansas Education District</small>
+          </div>
+        </div>
+        <p style="font-style: italic; color: #555; font-size: 1.05rem; line-height: 1.6;">"The infrastructure transformation has exceeded our expectations. The 35% cost savings alone justified the switch, but the Arkansas team support makes this a complete game-changer."</p>
+      
+    </div>
+    
+    <div class="hover-card" style="background: #fff; color: #333; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+      transition: all 0.3s ease;
+      cursor: pointer;
+    " onmouseover="
+      this.style.transform='translateY(-10px)';
+      this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';
+      
+    " onmouseout="
+      this.style.transform='translateY(0)';
+      this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';
+    ">
+      
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div class="avatar-circle" style="width: 60px; height: 60px; background: #125EAD; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#4BB74E';" onmouseout="this.style.backgroundColor='#125EAD';">
+            <i class="fas fa-user" style="color: white; font-size: 24px;"></i>
+          </div>
+          <div>
+            <strong style="font-size: 1.1rem;">Mike Davis</strong><br>
+            <small style="color: #666;">IT Director, Regional Medical Center</small>
+          </div>
+        </div>
+        <p style="font-style: italic; color: #555; font-size: 1.05rem; line-height: 1.6;">"Moving to Logical Front private cloud gave us enterprise-grade performance with a regional hospital budget. The 24/7 Arkansas-based support has been outstanding."</p>
+      
+    </div>
+    
+    <div class="hover-card" style="background: #fff; color: #333; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+      transition: all 0.3s ease;
+      cursor: pointer;
+    " onmouseover="
+      this.style.transform='translateY(-10px)';
+      this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)';
+      
+    " onmouseout="
+      this.style.transform='translateY(0)';
+      this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';
+    ">
+      
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+          <div class="avatar-circle" style="width: 60px; height: 60px; background: #125EAD; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#4BB74E';" onmouseout="this.style.backgroundColor='#125EAD';">
+            <i class="fas fa-user" style="color: white; font-size: 24px;"></i>
+          </div>
+          <div>
+            <strong style="font-size: 1.1rem;">Jennifer Rodriguez</strong><br>
+            <small style="color: #666;">Technology Coordinator, K-12 District</small>
+          </div>
+        </div>
+        <p style="font-style: italic; color: #555; font-size: 1.05rem; line-height: 1.6;">"The VDI solution transformed our 1:1 program. Students can access their desktop from anywhere, and we reduced our hardware costs by 40%."</p>
+      
+    </div>
+    
+        </div>
+      </div>
+    </section>
+    
+            </div>
+            <div class="usage-note">
+                <strong>Usage:</strong> Homepage social proof, case study sections, landing page credibility
+            </div>
+        </section>
+
+        <!-- Lead Generation Blocks Section -->
+        <section class="doc-section">
+            <h2 class="h2">Lead Generation Blocks</h2>
+            <p class="lead-text">Interactive tools and forms to capture qualified leads</p>
+            
+            <div class="block-purpose">
+                <strong>Purpose:</strong> Capture leads through interactive calculators, assessments, and forms. Provide value while collecting contact information.
+            </div>
+
+            <div class="block-example">
+                <div class="block-label">
+                    <span>ROI Calculator</span>
+                    <span class="supporting-text">Interactive savings calculator with industry-specific rates</span>
+                </div>
+                
+    <!-- ROI Calculator Component -->
+    <section id="calculator" style="background: #125EAD; color: white; padding: 80px 0; text-align: center;">
+      <div class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700;">Calculate Your Savings</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 40px;">See how much you can save vs public cloud</p>
+        <div style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 40px; border-radius: 12px; backdrop-filter: blur(10px);">
+          <div style="margin-bottom: 25px; text-align: left;">
+            <label style="display: block; margin-bottom: 8px; font-weight: 500;">Industry</label>
+            <select id="industry" style="width: 100%; padding: 12px; border: none; border-radius: 6px; font-size: 16px;">
+              <option value="">Select your industry</option>
+              <option value="education">Higher Education</option>
+              <option value="k12">K-12 Schools</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="government">Government</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 25px; text-align: left;">
+            <label style="display: block; margin-bottom: 8px; font-weight: 500;">Current Monthly IT Budget</label>
+            <input type="number" id="budget" placeholder="Enter your monthly budget" style="width: 100%; padding: 12px; border: none; border-radius: 6px; font-size: 16px;" />
+          </div>
+          <div style="margin-bottom: 25px; text-align: left;">
+            <label style="display: block; margin-bottom: 8px; font-weight: 500;">Number of Users</label>
+            <input type="number" id="users" placeholder="Enter number of users" style="width: 100%; padding: 12px; border: none; border-radius: 6px; font-size: 16px;" />
+          </div>
+          <div onclick="calculateROI()" style="display: inline-block;">
+            
+    <a onclick="calculateROI(); return false;" class="btn btn-primary btn-lg">Calculate My Savings</a>
+    
+          </div>
+          
+          <div id="roi-results" style="margin-top: 30px; padding: 25px; background: rgba(255,255,255,0.2); border-radius: 8px; display: none;">
+            <h3>Your Potential Savings</h3>
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+              <div>
+                <h4>Monthly Savings</h4>
+                <div id="monthly-savings" style="font-size: 2rem; font-weight: bold; color: #4BB74E;">$0</div>
+              </div>
+              <div>
+                <h4>Annual Savings</h4>
+                <div id="annual-savings" style="font-size: 2rem; font-weight: bold; color: #4BB74E;">$0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+            </div>
+            <div class="usage-note">
+                <strong>Usage:</strong> Homepage lead generation, pricing pages, landing page conversions
+            </div>
+        </section>
+
+        <!-- Component Library Section -->
+        <section class="doc-section">
+            <h2 class="h2">Reusable Components</h2>
+            <p class="lead-text">Individual components used within blocks</p>
+            
+            <div class="block-purpose">
+                <strong>Purpose:</strong> Atomic components that maintain consistency across all blocks and can be reused in different contexts.
+            </div>
+
+            <!-- Cards -->
+            <h3 class="h3">Card Components</h3>
+            <div class="component-grid">
+                <div class="component-example">
+                    <div class="component-name">Elevated Card</div>
+                    
+      <div class="card-elevated card-interactive">
+        <div class="icon-circle icon-trust">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h4>Enterprise Security</h4>
+        <p class="body-text">Bank-level security protocols protect your infrastructure.</p>
+        <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+      </div>
+    
+                </div>
+                <div class="component-example">
+                    <div class="component-name">Feature Card</div>
+                    
+      <div class="card-feature card-interactive">
+        <div class="card-feature-icon">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <h3>Private Cloud Infrastructure</h3>
+        <p class="body-text">Enterprise-grade private cloud with guaranteed performance.</p>
+        <ul style="list-style: none; padding: 0;">
+          <li><i class="fas fa-check" style="color: var(--color-text-green);"></i> 99.9% uptime SLA</li>
+          <li><i class="fas fa-check" style="color: var(--color-text-green);"></i> 24/7 monitoring</li>
+        </ul>
+      </div>
+    
+                </div>
+                <div class="component-example">
+                    <div class="component-name">Value Card</div>
+                    
+      <div class="card-value card-interactive">
+        <div class="icon-circle icon-growth">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h4>Scalable Growth</h4>
+        <p class="supporting-text">Infrastructure that grows with you</p>
+      </div>
+    
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <h3 class="h3">Button System</h3>
+            <div class="component-grid">
+                <div class="component-example">
+                    <div class="component-name">Primary Buttons</div>
+                    <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap;">
+                        <button class="btn btn-primary">Get Started</button>
+                        <button class="btn btn-primary btn-lg">Calculate Savings</button>
+                        <button class="btn btn-primary btn-sm">View Details</button>
+                    </div>
+                </div>
+                <div class="component-example">
+                    <div class="component-name">Secondary Button</div>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Icons -->
+            <h3 class="h3">Strategic Icon System</h3>
+            <div class="component-grid">
+                <div class="component-example">
+                    <div class="component-name">Trust (Green → Blue)</div>
+                    <div class="icon-circle icon-trust"><i class="fas fa-shield-alt"></i></div>
+                </div>
+                <div class="component-example">
+                    <div class="component-name">Expertise (Blue → Green)</div>
+                    <div class="icon-circle icon-expertise"><i class="fas fa-star"></i></div>
+                </div>
+                <div class="component-example">
+                    <div class="component-name">Innovation (Green ↔ Blue)</div>
+                    <div class="icon-circle icon-innovation"><i class="fas fa-rocket"></i></div>
+                </div>
+                <div class="component-example">
+                    <div class="component-name">Growth (Blue ↔ Green)</div>
+                    <div class="icon-circle icon-growth"><i class="fas fa-chart-line"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Notes -->
+        <section class="doc-section">
+            <h2 class="h2">Implementation Notes</h2>
+            <div class="block-purpose">
+                <strong>Design System Integration:</strong> All blocks use design-system.css variables and classes. No hardcoded values or inline styles in production code.
+            </div>
+            <div class="usage-note">
+                <strong>Card Hover System:</strong> All interactive cards use <code>.card-interactive</code> with <code>translateY(-8px) scale(1.02)</code> and strategic Blue↔Green color transitions.
+            </div>
+            <div class="usage-note">
+                <strong>Icon Mapping:</strong> Value proposition icons are intelligently mapped to strategic colors: Trust (cost/savings), Expertise (control/lock-in), Innovation (support/service), Growth (scalability).
+            </div>
+            <div class="usage-note">
+                <strong>Images:</strong> All blocks that use background images will display properly when image files are available in the /media directory.
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // ROI Calculator functionality
+        function calculateROI() {
+            const industry = document.getElementById('industry')?.value;
+            const budget = parseFloat(document.getElementById('budget')?.value) || 0;
+            const users = parseInt(document.getElementById('users')?.value) || 0;
+            
+            const savingsRates = {
+                'education': 0.35,
+                'k12': 0.35,
+                'healthcare': 0.33,
+                'manufacturing': 0.30,
+                'government': 0.30,
+                'other': 0.33
+            };
+            
+            const savingsRate = savingsRates[industry] || 0.33;
+            const monthlySavings = budget * savingsRate;
+            const annualSavings = monthlySavings * 12;
+            
+            if (budget > 0 && industry) {
+                document.getElementById('monthly-savings').textContent = '$' + monthlySavings.toFixed(0);
+                document.getElementById('annual-savings').textContent = '$' + annualSavings.toFixed(0);
+                document.getElementById('roi-results').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

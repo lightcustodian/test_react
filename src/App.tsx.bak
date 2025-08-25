@@ -1,0 +1,121 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HomePage } from './components/pages/HomePage';
+import { HigherEducationPage } from './components/pages/HigherEducationPage';
+import { IndustriesPage } from './components/pages/IndustriesPage';
+import { SolutionsPage } from './components/pages/SolutionsPage';
+import { CaseStudiesPage } from './components/pages/CaseStudiesPage';
+import { AboutUsPage } from './components/pages/AboutUsPage';
+import { AboutUsPageFixed } from './components/pages/AboutUsPageFixed';
+import { OurTeamPage } from './components/pages/OurTeamPage';
+import { BlogPage } from './components/pages/BlogPage';
+import { VideosPage } from './components/pages/VideosPage';
+import { ContactPage } from './components/pages/ContactPage';
+import { K12SchoolsPage } from './components/pages/K12SchoolsPage';
+import { RegionalHealthcarePage } from './components/pages/RegionalHealthcarePage';
+import { ManufacturingPage } from './components/pages/ManufacturingPage';
+import { PrivateCloudPage } from './components/pages/PrivateCloudPage';
+import { OnPremisePage } from './components/pages/OnPremisePage';
+import { MicrosoftAzurePage } from './components/pages/MicrosoftAzurePage';
+import { AIAutomationPage } from './components/pages/AIAutomationPage';
+import { MissionStatementPage } from './components/pages/MissionStatementPage';
+import { CoreValuesPage } from './components/pages/CoreValuesPage';
+import { BusinessPage } from './components/pages/BusinessPage';
+import { PrimaryDatacenterServicesPage } from './components/pages/PrimaryDatacenterServicesPage';
+import { BackupAsAServicePage } from './components/pages/BackupAsAServicePage';
+import { SecondaryDatacenterServicesPage } from './components/pages/SecondaryDatacenterServicesPage';
+import { DisasterRecoveryAsAServicePage } from './components/pages/DisasterRecoveryAsAServicePage';
+import { DesktopAsAServicePage } from './components/pages/DesktopAsAServicePage';
+import { VideoSurveillanceStoragePage } from './components/pages/VideoSurveillanceStoragePage';
+import { DataCenterModernizationPage } from './components/pages/DataCenterModernizationPage';
+import { ServersStoragePage } from './components/pages/ServersStoragePage';
+import { VirtualDesktopsVDIPage } from './components/pages/VirtualDesktopsVDIPage';
+import { DataProtectionPage } from './components/pages/DataProtectionPage';
+import { NetworkingPage } from './components/pages/NetworkingPage';
+import { ITSecurityPage } from './components/pages/ITSecurityPage';
+import { BrandingIndex } from './components/pages/BrandingIndex';
+import { BrandingComponentLibrary } from './components/pages/BrandingComponentLibrary';
+import { BrandingBlockLibrary } from './components/pages/BrandingBlockLibrary';
+import { BrandingGuidelines } from './components/pages/BrandingGuidelines';
+import { BrandingInteractionPatterns } from './components/pages/BrandingInteractionPatterns';
+import { EnterpriseComponentsShowcase } from './components/pages/EnterpriseComponentsShowcase';
+import { ContentBlocksShowcase } from './components/pages/ContentBlocksShowcase';
+import './App.css';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Main Routes */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/higher-education" element={<HigherEducationPage />} />
+        
+        {/* Navigation Pages */}
+        <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/solutions" element={<SolutionsPage />} />
+        <Route path="/case-studies" element={<CaseStudiesPage />} />
+        <Route path="/about-us" element={<AboutUsPageFixed />} />
+        <Route path="/contact" element={<ContactPage />} />
+        
+        {/* Industry Sub-pages */}
+        <Route path="/k12-schools" element={<K12SchoolsPage />} />
+        <Route path="/regional-healthcare" element={<RegionalHealthcarePage />} />
+        <Route path="/manufacturing" element={<ManufacturingPage />} />
+        <Route path="/business" element={<BusinessPage />} />
+        
+        {/* Solution Pages */}
+        <Route path="/private-cloud" element={<PrivateCloudPage />} />
+        <Route path="/on-premise" element={<OnPremisePage />} />
+        <Route path="/microsoft-azure" element={<MicrosoftAzurePage />} />
+        <Route path="/ai-automation" element={<AIAutomationPage />} />
+        
+        {/* Private Cloud Sub-pages */}
+        <Route path="/primary-datacenter-services" element={<PrimaryDatacenterServicesPage />} />
+        <Route path="/backup-as-a-service" element={<BackupAsAServicePage />} />
+        <Route path="/secondary-datacenter-services" element={<SecondaryDatacenterServicesPage />} />
+        <Route path="/disaster-recovery-as-a-service" element={<DisasterRecoveryAsAServicePage />} />
+        <Route path="/desktop-as-a-service" element={<DesktopAsAServicePage />} />
+        <Route path="/video-surveillance-storage" element={<VideoSurveillanceStoragePage />} />
+        
+        {/* On-Premise Sub-pages */}
+        <Route path="/data-center-modernization" element={<DataCenterModernizationPage />} />
+        <Route path="/servers-storage" element={<ServersStoragePage />} />
+        <Route path="/virtual-desktops-vdi" element={<VirtualDesktopsVDIPage />} />
+        <Route path="/data-protection" element={<DataProtectionPage />} />
+        <Route path="/networking" element={<NetworkingPage />} />
+        <Route path="/it-security" element={<ITSecurityPage />} />
+        
+        {/* AI/Automation Sub-pages */}
+        <Route path="/ai-infrastructure-as-a-service" element={<AIAutomationPage />} />
+        <Route path="/ai-testing-environments" element={<AIAutomationPage />} />
+        <Route path="/educational-ai-platform" element={<AIAutomationPage />} />
+        <Route path="/ai-operations-center" element={<AIAutomationPage />} />
+        
+        {/* Case Study Sub-pages */}
+        <Route path="/case-study-uams" element={<CaseStudiesPage />} />
+        <Route path="/case-study-asu-mid-south" element={<CaseStudiesPage />} />
+        <Route path="/case-study-venoco" element={<CaseStudiesPage />} />
+        <Route path="/case-study-glen-rose-isd" element={<CaseStudiesPage />} />
+        <Route path="/case-study-roger-williams-university" element={<CaseStudiesPage />} />
+        
+        {/* About Us Sub-pages */}
+        <Route path="/mission-statement" element={<MissionStatementPage />} />
+        <Route path="/values" element={<CoreValuesPage />} />
+        <Route path="/our-team" element={<OurTeamPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/videos" element={<VideosPage />} />
+        
+        {/* Branding Routes - separate router tree */}
+        <Route path="/branding" element={<BrandingIndex />} />
+        <Route path="/branding/component-library" element={<BrandingComponentLibrary />} />
+        <Route path="/branding/block-library" element={<BrandingBlockLibrary />} />
+        <Route path="/branding/brand-guidelines" element={<BrandingGuidelines />} />
+        <Route path="/branding/interaction-patterns" element={<BrandingInteractionPatterns />} />
+        <Route path="/enterprise-components" element={<EnterpriseComponentsShowcase />} />
+        <Route path="/content-blocks" element={<ContentBlocksShowcase />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

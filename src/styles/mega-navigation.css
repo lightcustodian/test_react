@@ -1,0 +1,180 @@
+/* Mega Navigation Styles */
+
+.mega-dropdown-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: all 300ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%; /* Full width within the column */
+  max-width: 250px; /* Narrower for tighter grouping */
+  min-height: 50px; /* Proper height for readability */
+  margin-left: auto; /* Center the cards horizontally */
+  margin-right: auto; /* Center the cards horizontally */
+}
+
+.mega-dropdown-box:hover {
+  background-color: #e8f5e8; /* Light green background on hover */
+  border-color: #4BB74E;
+  transform: translateY(-0.25rem);
+  box-shadow: 0 10px 15px -3px rgba(75, 183, 78, 0.2);
+}
+
+.mega-dropdown-box-header {
+  background: linear-gradient(to right, #4BB74E, #125EAD);
+  color: white;
+  height: 80px; /* Fixed height to prevent text wrapping issues */
+  width: 100%; /* Full width within the column */
+  max-width: 250px; /* Narrower for tighter grouping */
+  margin-left: auto; /* Center the header cards horizontally */
+  margin-right: auto; /* Center the header cards horizontally */
+  align-items: center; /* Center content vertically */
+  justify-content: flex-start; /* Align content to left */
+}
+
+.mega-dropdown-box-header:hover {
+  background: linear-gradient(to right, #125EAD, #4BB74E);
+}
+
+.mega-icon-circle {
+  background-color: #4BB74E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 300ms;
+  flex-shrink: 0;
+  width: 40px; /* Proper size for visibility */
+  height: 40px; /* Proper size for visibility */
+  font-size: 1.25rem;
+}
+
+.mega-icon-circle-sm {
+  width: 32px; /* Proper size for visibility */
+  height: 32px; /* Proper size for visibility */
+  font-size: 1rem;
+}
+
+.mega-dropdown-box-header .mega-icon-circle {
+  background-color: white;
+  color: #125EAD;
+}
+
+.mega-box-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.mega-box-title {
+  font-size: 1rem; /* Smaller to prevent wrapping */
+  font-weight: 600;
+  margin-bottom: 0;
+  color: white;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow if text is too long */
+  text-overflow: ellipsis; /* Add ... if text overflows */
+  line-height: 1.2; /* Controlled line height */
+}
+
+.mega-box-link {
+  color: #125EAD;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  display: block;
+  transition: color 300ms;
+}
+
+.mega-box-link:hover {
+  color: #4BB74E;
+}
+
+.mega-dropdown-content {
+  background-color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #f3f4f6;
+  width: 100vw;
+  position: relative;
+  left: 0;
+}
+
+.mega-dropdown-header {
+  margin-bottom: 0.5rem;
+}
+
+/* Full-width dropdown container */
+.mega-dropdown-wrapper {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mega-dropdown-box {
+    width: 100%;
+    min-height: 60px;
+  }
+  
+  .mega-icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .mega-icon-circle-sm {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+
+/* Hover animations */
+.mega-dropdown-box:hover .mega-icon-circle {
+  transform: scale(1.1);
+  background-color: #125EAD;
+}
+
+.mega-dropdown-box-header:hover .mega-icon-circle {
+  background-color: #4BB74E;
+  color: white;
+}
+
+/* Group hover functionality for dropdowns - using specific child selectors */
+li.relative:hover > .mega-dropdown-wrapper,
+li.group:hover > .mega-dropdown-wrapper,
+li:hover > .mega-dropdown-wrapper {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* Chevron rotation on hover - only for the hovered item */
+li.relative:hover > a .fa-chevron-down,
+li.group:hover > a .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Force desktop navigation visibility */
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex !important;
+  }
+  
+  /* Hide hamburger menu on desktop */
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}

@@ -1,0 +1,677 @@
+/* ========================================
+   LOGICAL FRONT DESIGN SYSTEM
+   Version 1.0.0
+   ======================================== */
+
+/* ========================================
+   1. DESIGN TOKENS - Core Variables
+   ======================================== */
+:root {
+  /* Brand Colors - Strategic Blue/Green System */
+  --color-primary-blue: #125EAD;        /* Trust & Expertise */
+  --color-primary-green: #4BB74E;       /* Growth & Innovation */
+  --color-dark-blue: #0D3F7A;           /* Darker blue for emphasis */
+  --color-dark-green: #3A9B3E;          /* Darker green for emphasis */
+  --color-light-blue: #E6F2FF;          /* Light blue backgrounds */
+  --color-light-green: #E8F5E9;         /* Light green backgrounds */
+  
+  /* Text Colors - 6 Color System */
+  --color-text-dark: #1a202c;           /* 1. Dark (blackish) */
+  --color-text-medium: #6b7280;         /* 2. Medium Gray */
+  --color-text-light: #d1d5db;          /* 3. Light Gray */
+  --color-text-inverse: #ffffff;        /* 4. Light (whitish) */
+  --color-text-blue: #125EAD;           /* 5. Blue (our brand) */
+  --color-text-green: #4BB74E;          /* 6. Green (our brand) */
+  
+  /* Legacy text color aliases for compatibility */
+  --color-text-primary: var(--color-text-dark);
+  --color-text-secondary: var(--color-text-medium);
+  --color-text-tertiary: var(--color-text-light);
+  
+  /* Background Colors - Same 6 Color System */
+  --color-bg-dark: #1a202c;             /* 1. Dark (blackish) */
+  --color-bg-medium: #6b7280;           /* 2. Medium Gray */
+  --color-bg-light: #d1d5db;            /* 3. Light Gray */
+  --color-bg-inverse: #ffffff;          /* 4. Light (whitish) */
+  --color-bg-blue: #125EAD;             /* 5. Blue (our brand) */
+  --color-bg-green: #4BB74E;            /* 6. Green (our brand) */
+  
+  /* Green->Blue Transition Colors */
+  --color-transition-green-to-blue: #125EAD;     /* Green transitions to Blue */
+  --color-transition-blue-to-green: #4BB74E;     /* Blue transitions to Green */
+  
+  /* Legacy background color aliases for compatibility */
+  --color-bg-primary: var(--color-bg-inverse);
+  --color-bg-secondary: #f7fafc;        /* Slightly off-white */
+  --color-bg-tertiary: #e2e8f0;         /* Light gray-blue */
+  
+  /* State Colors */
+  --color-success: var(--color-primary-green);
+  --color-warning: #F97316;
+  --color-error: #EF4444;
+  --color-info: var(--color-primary-blue);
+  
+  /* Typography Scale - Professional Hierarchy */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: 'Monaco', 'Courier New', monospace;
+  
+  --font-size-hero: 3.8rem;             /* 60.8px - Hero headlines */
+  --font-size-h1: 3rem;                 /* 48px - Page titles */
+  --font-size-h2: 2.25rem;              /* 36px - Section headers */
+  --font-size-h3: 1.875rem;             /* 30px - Subsections */
+  --font-size-h4: 1.5rem;               /* 24px - Card titles */
+  --font-size-h5: 1.25rem;              /* 20px - Small headers */
+  --font-size-body-lg: 1.125rem;        /* 18px - Lead text */
+  --font-size-body: 1rem;               /* 16px - Body text */
+  --font-size-body-sm: 0.875rem;        /* 14px - Small text */
+  --font-size-caption: 0.75rem;         /* 12px - Captions */
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+  
+  /* Spacing System - 8px Base Unit */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 80px;
+  --space-4xl: 96px;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* Shadows - Elevation System */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 12px 24px rgba(18, 94, 173, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+  
+  /* Z-Index Scale */
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-popover: 50;
+  --z-tooltip: 60;
+}
+
+/* ========================================
+   2. GLOBAL STYLES - Foundation
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   3. TYPOGRAPHY - Hierarchy System
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+.hero-headline {
+  font-size: 4.5rem;
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #4BB74E, #125EAD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(75, 183, 78, 0.3);
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  0% { text-shadow: 0 0 30px rgba(75, 183, 78, 0.3); }
+  100% { text-shadow: 0 0 40px rgba(18, 94, 173, 0.4); }
+}
+
+h1, .h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--space-lg);
+}
+
+h2, .h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--space-md);
+  color: var(--color-primary-blue);
+}
+
+h3, .h3 {
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--space-md);
+}
+
+h4, .h4 {
+  font-size: var(--font-size-h4);
+  margin-bottom: var(--space-sm);
+}
+
+.body-text {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+.lead-text {
+  font-size: var(--font-size-body-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.supporting-text {
+  font-size: var(--font-size-body-sm);
+  color: var(--color-text-tertiary);
+}
+
+/* ========================================
+   4. LAYOUT UTILITIES
+   ======================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section-padding {
+  padding: var(--space-3xl) 0;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+/* ========================================
+   5. BUTTON SYSTEM
+   ======================================== */
+.btn {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4BB74E 0%, #125EAD 100%);
+  color: white;
+  box-shadow: 0 8px 30px rgba(75, 183, 78, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 50px rgba(75, 183, 78, 0.4);
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.btn-lg {
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--font-size-body-lg);
+}
+
+.btn-sm {
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-body-sm);
+}
+
+/* ========================================
+   6. CARD COMPONENTS
+   ======================================== */
+.card {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Elevated Content Card */
+.card-elevated {
+  background: var(--color-bg-primary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card-elevated:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Feature Highlight Card */
+.card-feature {
+  background: var(--color-bg-primary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-bg-tertiary);
+  transition: all var(--transition-base);
+}
+
+.card-feature:hover {
+  border-color: var(--color-primary-green);
+  box-shadow: var(--shadow-md);
+}
+
+.card-feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary-blue);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: var(--space-md);
+  transition: all var(--transition-base);
+}
+
+.card-feature:hover .card-feature-icon {
+  background: var(--color-primary-green);
+}
+
+/* Testimonial Card */
+.card-testimonial {
+  background: var(--color-bg-secondary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.card-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-md);
+  font-size: 4rem;
+  color: var(--color-primary-green);
+  opacity: 0.2;
+}
+
+/* Value Proposition Card */
+.card-value {
+  background: linear-gradient(135deg, var(--color-light-blue) 0%, var(--color-light-green) 100%);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.card-value:hover {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   7. ICON SYSTEM - Strategic Colors
+   ======================================== */
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+/* Trust Indicator (White on Green) */
+.icon-trust {
+  background: var(--color-primary-green);
+  color: var(--color-text-inverse);
+}
+
+.icon-trust:hover {
+  background: var(--color-primary-blue);
+}
+
+/* Expertise Indicator (White on Blue) */
+.icon-expertise {
+  background: var(--color-primary-blue);
+  color: var(--color-text-inverse);
+}
+
+.icon-expertise:hover {
+  background: var(--color-primary-green);
+}
+
+/* Innovation Highlight (Blue on Green) */
+.icon-innovation {
+  background: var(--color-primary-green);
+  color: var(--color-primary-blue);
+}
+
+.icon-innovation:hover {
+  background: var(--color-primary-blue);
+  color: var(--color-primary-green);
+}
+
+/* Growth Emphasis (Green on Blue) */
+.icon-growth {
+  background: var(--color-primary-blue);
+  color: var(--color-primary-green);
+}
+
+.icon-growth:hover {
+  background: var(--color-primary-green);
+  color: var(--color-primary-blue);
+}
+
+/* ========================================
+   8. BLOCK COMPONENTS - Page Sections
+   ======================================== */
+
+/* Hero Block */
+.block-hero {
+  padding: 8rem 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  /* Default background - configurable per page */
+  background-image: 
+    linear-gradient(135deg, rgba(10, 15, 28, 0.85), rgba(18, 94, 173, 0.7)), 
+    url('/media/earth_space_hero.jpg');
+}
+
+/* Hero gradient overlay with configurable opacity */
+.block-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(75, 183, 78, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(18, 94, 173, 0.15) 0%, transparent 50%);
+  animation: heroGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.7; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Solutions Showcase Block */
+.block-solutions {
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg-secondary);
+}
+
+/* Value Proposition Block */
+.block-values {
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg-primary);
+}
+
+/* Testimonials Block */
+.block-testimonials {
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg-secondary);
+}
+
+/* Footer Block */
+.block-footer {
+  background: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+  padding: var(--space-2xl) 0 var(--space-lg);
+}
+
+/* Hero Stats Components */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  min-width: 200px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4BB74E;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   9. INTERACTION PATTERNS
+   ======================================== */
+
+/* PRIMARY CARD HOVER SYSTEM - Use for 90%+ of interactive cards */
+.card-interactive {
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.card-interactive:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Icon color transitions triggered by CARD hover */
+.card-interactive:hover .icon-trust {
+  background: var(--color-transition-green-to-blue);  /* Green → Blue */
+}
+
+.card-interactive:hover .icon-expertise {
+  background: var(--color-transition-blue-to-green); /* Blue → Green */
+}
+
+.card-interactive:hover .icon-innovation {
+  background: var(--color-transition-green-to-blue);  /* Green → Blue */
+  color: var(--color-transition-blue-to-green);       /* Blue → Green */
+}
+
+.card-interactive:hover .icon-growth {
+  background: var(--color-transition-blue-to-green); /* Blue → Green */
+  color: var(--color-transition-green-to-blue);      /* Green → Blue */
+}
+
+/* Legacy hover effects (for specific use cases only) */
+.hover-lift {
+  transition: transform var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-scale {
+  transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: box-shadow var(--transition-base);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(75, 183, 78, 0.3);
+}
+
+/* Color Transition Effect */
+.hover-color-transition {
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+/* ========================================
+   10. RESPONSIVE UTILITIES
+   ======================================== */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-hero: 2.5rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.5rem;
+  }
+  
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .section-padding {
+    padding: var(--space-2xl) 0;
+  }
+}
