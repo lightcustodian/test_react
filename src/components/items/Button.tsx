@@ -10,7 +10,7 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   ...props 
 }) => {
-  const baseClasses = 'inline-flex items-center gap-2 font-bold transition-all duration-300 cursor-pointer border-none text-center uppercase tracking-wide';
+  const baseClasses = 'inline-flex items-center gap-2 font-bold transition-all duration-300 cursor-pointer border-none text-left uppercase tracking-wide';
   
   const variants = {
     primary: 'text-white shadow-lg hover:shadow-xl hover:-translate-y-1 hover:scale-105 rounded-full bg-gradient-to-r from-brand-green to-brand-blue',

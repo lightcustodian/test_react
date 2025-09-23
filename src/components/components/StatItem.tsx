@@ -11,7 +11,7 @@ const StatItem: React.FC<StatItemProps> = ({
     'text-center bg-black/20 backdrop-blur-md p-6 rounded-xl',
     'border border-white/10 transition-all duration-300',
     'hover:-translate-y-1 hover:bg-black/30',
-    'min-w-48 max-w-64',
+    'w-52 h-32 flex flex-col justify-center',
     className
   )}>
     <div className="text-4xl font-black mb-3 tracking-tight text-brand-green overflow-hidden text-ellipsis">

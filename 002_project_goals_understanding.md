@@ -51,42 +51,42 @@ You seem to prefer:
 ## Questions About Your Goals
 
 ### Strategic Questions
-1. **Target Audience Priority:** Which visitor segment is most important for initial optimization - enterprise businesses, educational institutions, or healthcare organizations?
-2. **Conversion Goals:** What specific actions do you want visitors to take - schedule consultations, download resources, or direct contact?
-3. **Brand Perception:** Should animations convey more "cutting-edge innovation" or "reliable stability"?
-4. **Competitive Positioning:** Are there specific competitor websites you want to surpass or differentiate from?
+1. **Target Audience Priority:** Which visitor segment is most important for initial optimization - enterprise businesses, educational institutions, or healthcare organizations? All
+2. **Conversion Goals:** What specific actions do you want visitors to take - schedule consultations, download resources, or direct contact? schedule consultations
+3. **Brand Perception:** Should animations convey more "cutting-edge innovation" or "reliable stability"? Both
+4. **Competitive Positioning:** Are there specific competitor websites you want to surpass or differentiate from? alchemy https://credera.com/en-us https://parivedasolutions.com/ https://alchemytechgroup.com/
 
 ### Technical Questions
-1. **Performance Thresholds:** What page load time targets are acceptable? Under 3 seconds? Under 2?
-2. **Browser Support:** Do we need to support older browsers, or can we focus on modern browsers only?
-3. **Accessibility Requirements:** Are there specific compliance standards beyond WCAG 2.1 AA?
-4. **Mobile Priority:** Should mobile experience be prioritized equally or is desktop primary for B2B visitors?
+1. **Performance Thresholds:** What page load time targets are acceptable? Under 3 seconds? Under 2? The page load time preferably is under 3 seconds but with an interesting and eye catching loading screen that will distract them from waiting.
+2. **Browser Support:** Do we need to support older browsers, or can we focus on modern browsers only? Preferably they are built for modern browsers but still should be able to run somewhat well on older browsers though that is no the goal
+3. **Accessibility Requirements:** Are there specific compliance standards beyond WCAG 2.1 AA? No just WCAG 2.1 AA
+4. **Mobile Priority:** Should mobile experience be prioritized equally or is desktop primary for B2B visitors? The primary way to look at the website will be on desktop. But it is equally important so that anyone on a mobile device is able to look at it as well.
 
 ### Implementation Questions
-1. **Animation Intensity:** Do you prefer subtle, professional animations or more dramatic, attention-grabbing effects?
-2. **User Control:** Should visitors be able to disable animations, or should we only respect system preferences?
-3. **A/B Testing:** Do you want to test animated vs. static versions of key pages?
-4. **Rollout Strategy:** Should animations be deployed all at once or gradually introduced?
+1. **Animation Intensity:** Do you prefer subtle, professional animations or more dramatic, attention-grabbing effects? Some of both depending on the context.
+2. **User Control:** Should visitors be able to disable animations, or should we only respect system preferences? only system preferences
+3. **A/B Testing:** Do you want to test animated vs. static versions of key pages? Yes
+4. **Rollout Strategy:** Should animations be deployed all at once or gradually introduced? As you scroll down you will be able to see more so that you never see too many at once.
 
 ## Additional Information That Would Be Helpful
 
 ### Business Context
-1. **Success Metrics:** How do you measure website success - lead quality, quantity, or specific conversion rates?
-2. **Sales Process:** How does the website fit into your overall sales funnel?
-3. **Content Authority:** Who approves final design decisions and content changes?
-4. **Timeline:** Are there specific deadlines or launch dates we're working toward?
+1. **Success Metrics:** How do you measure website success - lead quality, quantity, or specific conversion rates? The quality of the website so that when people look at the website it will reflect professionalism.
+2. **Sales Process:** How does the website fit into your overall sales funnel? Normal
+3. **Content Authority:** Who approves final design decisions and content changes? I am the lead developer of this website.
+4. **Timeline:** Are there specific deadlines or launch dates we're working toward? As soon as possible.
 
 ### Technical Context
-1. **Analytics Setup:** Do you have Google Analytics, heat mapping, or other tracking tools installed?
-2. **CRM Integration:** Should the website integrate with any CRM or marketing automation tools?
-3. **Content Management:** Will non-technical staff need to update content regularly?
-4. **Future Features:** Are there planned features (client portal, resource library, calculator tools) that animations should accommodate?
+1. **Analytics Setup:** Do you have Google Analytics, heat mapping, or other tracking tools installed? No
+2. **CRM Integration:** Should the website integrate with any CRM or marketing automation tools? Yes but later
+3. **Content Management:** Will non-technical staff need to update content regularly? When we are done with this project we will convert this system to Payload cms.
+4. **Future Features:** Are there planned features (client portal, resource library, calculator tools) that animations should accommodate? No
 
 ### Design Context
-1. **Brand Guidelines:** Are there specific brand standards beyond the colors and fonts already implemented?
-2. **Inspiration Sites:** Are there websites (in any industry) whose animation style you admire?
-3. **No-Go Elements:** Are there specific animation types or effects you definitely don't want?
-4. **Cultural Considerations:** Should animations reflect Arkansas/regional identity in any way?
+1. **Brand Guidelines:** Are there specific brand standards beyond the colors and fonts already implemented? It should look professional with similar designs to itself.
+2. **Inspiration Sites:** Are there websites (in any industry) whose animation style you admire? https://credera.com/en-us https://parivedasolutions.com/ https://alchemytechgroup.com/
+3. **No-Go Elements:** Are there specific animation types or effects you definitely don't want? Anything to flashy or unprofessional
+4. **Cultural Considerations:** Should animations reflect Arkansas/regional identity in any way? No
 
 ## My Recommendations Based on Current Understanding
 

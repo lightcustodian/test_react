@@ -51,7 +51,7 @@ export default function ResultsSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-white/10 backdrop-blur-lg border border-white/20 h-full" data-testid={`result-card-${index}`}>
+              <Card className="bg-white/5 backdrop-blur-lg border border-white/20 h-full" data-testid={`result-card-${index}`}>
                 <CardContent className="p-8">
                   <div className="text-4xl font-bold text-green-300 mb-2" data-testid={`result-metric-${index}`}>
                     {result.metric}

@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
         }
       `}</style>
       
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-8 md:px-12 lg:px-16">
         <div className="footer-grid">
           
           {/* Company Info */}

@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Logical Front' }],
   creator: 'Logical Front',
   metadataBase: new URL('https://logicalfront.com'),
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/favicon.ico',
+    apple: '/icon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

@@ -9,7 +9,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
   testimonials = []
 }) => (
   <section style={{background: 'linear-gradient(135deg, #4BB74E 0%, #125EAD 100%)', color: 'white', textAlign: 'center', padding: '80px 0'}}>
-    <div className="container mx-auto px-5">
+    <div className="container mx-auto px-8 md:px-12 lg:px-16">
       <h2 style={{fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700}}>{title}</h2>
       {subtitle && (
         <p style={{fontSize: '1.2rem', marginBottom: '3rem', opacity: 0.9}}>{subtitle}</p>
@@ -20,10 +20,12 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
             key={index}
             className="hover-card" 
             style={{
-              background: 'white', 
-              color: '#333', 
+              background: 'rgba(255, 255, 255, 0.3)', 
+              backdropFilter: 'blur(10px)',
+              color: '#fff', 
               padding: '30px', 
               borderRadius: '12px', 
+              border: '1px solid rgba(255, 255, 255, 0.2)',
               boxShadow: '0 4px 12px rgba(0,0,0,0.1)', 
               transition: 'all 0.3s ease',
               cursor: 'pointer'
@@ -37,11 +39,11 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
               e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
             }}
           >
-            <h4 style={{fontSize: '1.3rem', marginBottom: '15px', fontWeight: 600, color: '#125EAD'}}>
+            <h4 style={{fontSize: '1.3rem', marginBottom: '15px', fontWeight: 600, color: '#98FF98'}}>
               {testimonial.organization}
             </h4>
-            <p style={{marginBottom: '15px', fontStyle: 'italic', color: '#555'}}>"{testimonial.quote}"</p>
-            <strong style={{color: '#333'}}>- {testimonial.author}</strong>
+            <p style={{marginBottom: '15px', fontStyle: 'italic', color: 'rgba(255, 255, 255, 0.9)'}}>"{testimonial.quote}"</p>
+            <strong style={{color: 'rgba(255, 255, 255, 0.95)'}}>- {testimonial.author}</strong>
           </div>
         ))}
       </div>

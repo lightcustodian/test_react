@@ -57,12 +57,11 @@ export const navigationMenu: MenuItem[] = [
     label: 'CASE STUDIES',
     href: '/case-studies',
     children: [
-      { label: 'Venoco ($400K savings)', href: '/case-study-venoco' },
-      { label: 'Glen Rose ISD (50% cost reduction)', href: '/case-study-glen-rose-isd' },
-      { label: 'Pearland ISD (1/3 implementation time)', href: '/case-study-pearland-isd' },
-      { label: 'Aurora Public Schools', href: '/case-study-aurora' },
-      { label: 'Crosby ISD', href: '/case-study-crosby-isd' },
-      { label: 'Integrated Project Services (IPS)', href: '/case-study-ips' },
+      { label: 'Higher Education Success Stories', href: '/case-studies' },
+      { label: 'K-12 School Implementations', href: '/case-studies' },
+      { label: 'Healthcare Infrastructure', href: '/case-studies' },
+      { label: 'Manufacturing Solutions', href: '/case-studies' },
+      { label: 'Business Transformations', href: '/case-studies' },
       { label: 'See All Case Studies', href: '/case-studies' }
     ]
   },
@@ -70,12 +69,11 @@ export const navigationMenu: MenuItem[] = [
     label: 'ABOUT US',
     href: '/about-us',
     children: [
-      { label: 'Mission Statement', href: '/mission-statement' },
-      { label: 'Core Values', href: '/values' },
-      { label: 'Our Team', href: '/our-team' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Videos', href: '/videos' },
-      { label: 'Contact', href: '/contact' }
+      { label: 'Our Company', href: '/about-us' },
+      { label: 'Our Mission', href: '/about-us' },
+      { label: 'Our Team', href: '/about-us' },
+      { label: 'Company Values', href: '/about-us' },
+      { label: 'Contact Us', href: '/contact' }
     ]
   }
 ];

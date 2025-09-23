@@ -9,7 +9,7 @@ const SolutionsSection: React.FC<ServiceGridProps> = ({
   services = []
 }) => (
   <section style={{padding: '80px 0', background: 'white'}}>
-    <div className="container mx-auto px-5">
+    <div className="container mx-auto px-8 md:px-12 lg:px-16">
       <h2 style={{fontSize: '2.5rem', textAlign: 'center', marginBottom: '1rem', color: '#125EAD', fontWeight: 700}}>
         {title}
       </h2>
@@ -36,17 +36,13 @@ const SolutionsSection: React.FC<ServiceGridProps> = ({
               e.currentTarget.style.transform = 'translateY(-12px)';
               e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
               const iconCircle = e.currentTarget.querySelector('.solution-icon-circle') as HTMLElement;
-              const icon = e.currentTarget.querySelector('.solution-icon-circle i') as HTMLElement;
               if (iconCircle) iconCircle.style.backgroundColor = '#125EAD';
-              if (icon) icon.style.color = '#4BB74E';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
               e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
               const iconCircle = e.currentTarget.querySelector('.solution-icon-circle') as HTMLElement;
-              const icon = e.currentTarget.querySelector('.solution-icon-circle i') as HTMLElement;
               if (iconCircle) iconCircle.style.backgroundColor = '#4BB74E';
-              if (icon) icon.style.color = '#125EAD';
             }}
           >
             <div style={{display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem'}}>
@@ -67,9 +63,8 @@ const SolutionsSection: React.FC<ServiceGridProps> = ({
                 <i 
                   className={service.icon} 
                   style={{
-                    color: '#125EAD',
-                    fontSize: '20px',
-                    transition: 'color 0.3s ease'
+                    color: 'white',
+                    fontSize: '20px'
                   }}
                 />
               </div>

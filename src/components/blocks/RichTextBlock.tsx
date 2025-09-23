@@ -78,8 +78,8 @@ const RichTextBlock: React.FC<RichTextBlockProps> = ({
     widthClasses[width],
     alignmentClasses[alignment],
     {
-      'p-6': variant !== 'article',
-      'p-8': variant === 'article'
+      'p-8': variant !== 'article',
+      'p-12': variant === 'article'
     },
     className
   );
@@ -175,7 +175,7 @@ const RichTextBlock: React.FC<RichTextBlockProps> = ({
       )}
 
       {/* Rich Text Content */}
-      <div className={contentClasses}>
+      <div className={cn(contentClasses, "px-8")}>
         {typeof content === 'string' ? (
           <div 
             dangerouslySetInnerHTML={{ __html: content }}

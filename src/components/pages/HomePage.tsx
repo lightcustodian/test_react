@@ -7,7 +7,6 @@ import { HeroSection } from '../blocks/HeroSection';
 import { SolutionsSection } from '../blocks/SolutionsSection';
 import { TestimonialSection } from '../blocks/TestimonialSection';
 import { ValuePropsSection } from '../blocks/ValuePropsSection';
-import { Button } from '../items/Button';
 
 const HomePage: React.FC = () => {
   const heroData = {
@@ -140,20 +139,20 @@ const HomePage: React.FC = () => {
       <MegaNavigation />
       
       <div>
-        <HeroSection {...heroData} className="pt-20 pb-32" />
+        <HeroSection {...heroData} className="pt-20" />
         <SolutionsSection {...solutions} />
         <TestimonialSection {...testimonials} />
         <ValuePropsSection {...valueProps} />
         
         {/* ROI Calculator Section */}
-        <section id="calculator" style={{background: '#125EAD', color: 'white', padding: '80px 0', textAlign: 'center'}}>
+        <section id="calculator" style={{background: 'linear-gradient(135deg, #125EAD 0%, #1a6cc0 50%, #4BB74E 100%)', color: 'white', padding: '80px 0', textAlign: 'center'}}>
           <div style={{maxWidth: '1200px', margin: '0 auto', padding: '0 20px'}}>
             <h2 style={{fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700}}>Calculate Your Infrastructure Savings</h2>
             <p style={{fontSize: '1.2rem', marginBottom: '40px'}}>See how much you could save by switching to Logical Front's infrastructure solutions</p>
-            <div style={{maxWidth: '600px', margin: '0 auto', background: 'rgba(255,255,255,0.1)', padding: '40px', borderRadius: '12px', backdropFilter: 'blur(10px)'}}>
+            <div style={{maxWidth: '600px', margin: '0 auto', background: 'rgba(73, 137, 186, 0.9)', padding: '40px', borderRadius: '12px', backdropFilter: 'blur(10px)'}}>
               <div style={{marginBottom: '25px', textAlign: 'left'}}>
                 <label style={{display: 'block', marginBottom: '8px', fontWeight: 500}}>Industry</label>
-                <select id="industry" style={{width: '100%', padding: '12px', border: 'none', borderRadius: '6px', fontSize: '16px', color: '#333', backgroundColor: 'white'}}>
+                <select id="industry" style={{width: '100%', padding: '12px', borderRadius: '6px', fontSize: '16px', color: '#333', border: '2px solid transparent', background: 'linear-gradient(white, white) padding-box, linear-gradient(90deg, #9CA3AF, #D1D5DB, #9CA3AF) border-box'}}>
                   <option value="">Select your industry</option>
                   <option value="education">Higher Education</option>
                   <option value="k12">K-12 Schools</option>
@@ -165,11 +164,11 @@ const HomePage: React.FC = () => {
               </div>
               <div style={{marginBottom: '25px', textAlign: 'left'}}>
                 <label style={{display: 'block', marginBottom: '8px', fontWeight: 500}}>Current Monthly IT Budget</label>
-                <input type="number" id="budget" placeholder="Enter your monthly budget" style={{width: '100%', padding: '12px', border: 'none', borderRadius: '6px', fontSize: '16px', color: '#333', backgroundColor: 'white'}} />
+                <input type="number" id="budget" placeholder="Enter your monthly budget" style={{width: '100%', padding: '12px', borderRadius: '6px', fontSize: '16px', color: '#333', border: '2px solid transparent', background: 'linear-gradient(white, white) padding-box, linear-gradient(90deg, #9CA3AF, #D1D5DB, #9CA3AF) border-box'}} />
               </div>
               <div style={{marginBottom: '25px', textAlign: 'left'}}>
                 <label style={{display: 'block', marginBottom: '8px', fontWeight: 500}}>Number of Users</label>
-                <input type="number" id="users" placeholder="Enter number of users" style={{width: '100%', padding: '12px', border: 'none', borderRadius: '6px', fontSize: '16px', color: '#333', backgroundColor: 'white'}} />
+                <input type="number" id="users" placeholder="Enter number of users" style={{width: '100%', padding: '12px', borderRadius: '6px', fontSize: '16px', color: '#333', border: '2px solid transparent', background: 'linear-gradient(white, white) padding-box, linear-gradient(90deg, #9CA3AF, #D1D5DB, #9CA3AF) border-box'}} />
               </div>
               <div 
                 onClick={() => {
@@ -208,20 +207,21 @@ const HomePage: React.FC = () => {
                   style={{
                     padding: '1rem 2.5rem', 
                     fontSize: '1.1rem',
-                    background: 'linear-gradient(135deg, #4BB74E 0%, #4BB74E 50%, #125EAD 100%)',
+                    background: 'linear-gradient(#1a6cc0, #1a6cc0) padding-box, linear-gradient(90deg, #4BB74E, #5FD666, #4BB74E) border-box',
                     color: 'white',
                     textDecoration: 'none',
                     borderRadius: '8px',
                     fontWeight: 600,
                     display: 'inline-block',
                     transition: 'all 0.3s ease',
-                    border: 'none',
+                    border: '3px solid transparent',
                     cursor: 'pointer',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    position: 'relative'
                   }} 
                   onMouseOver={(e) => {
                     e.currentTarget.style.transform = 'translateY(-3px)'; 
-                    e.currentTarget.style.boxShadow = '0 6px 20px rgba(18, 94, 173, 0.3)';
+                    e.currentTarget.style.boxShadow = '0 6px 20px rgba(75, 183, 78, 0.4)';
                   }} 
                   onMouseOut={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)'; 

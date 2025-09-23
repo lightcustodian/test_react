@@ -3,6 +3,7 @@ export interface CTAData {
   text: string;
   href?: string;
   icon?: string;
+  variant?: 'primary' | 'secondary';
   onClick?: () => void;
 }
 
@@ -24,6 +25,7 @@ export interface HeroContent {
 
 export interface HeroSectionProps extends HeroContent {
   className?: string;
+  style?: React.CSSProperties;
 }
 
 // Value Props Section Types

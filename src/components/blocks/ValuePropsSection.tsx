@@ -9,7 +9,7 @@ const ValuePropsSection: React.FC<ValuePropsSectionProps> = ({
 }) => {
   return (
     <section style={{background: 'white', padding: '80px 0'}}>
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-8 md:px-12 lg:px-16">
         <h2 style={{fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', color: '#125EAD', fontWeight: 700}}>
           {title}
         </h2>

@@ -35,54 +35,66 @@ const MegaNavigation: React.FC<NavigationProps> = ({
               </div>
             </div>
             <div className="space-y-2">
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-server"></i>
+              <Link href="/private-cloud" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-server"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Primary Datacenter Services</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/primary-datacenter-services" className="mega-box-link">Primary Datacenter Services</Link>
+              </Link>
+              <Link href="/private-cloud" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-shield"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Backup as a Service</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-shield"></i>
+              </Link>
+              <Link href="/private-cloud" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-database"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Secondary Datacenter Services</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/backup-as-a-service" className="mega-box-link">Backup as a Service</Link>
+              </Link>
+              <Link href="/private-cloud" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-undo"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Disaster Recovery as a Service</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-database"></i>
+              </Link>
+              <Link href="/private-cloud" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-desktop"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Desktop as a Service</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/secondary-datacenter-services" className="mega-box-link">Secondary Datacenter Services</Link>
+              </Link>
+              <Link href="/private-cloud" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-video"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Video Surveillance Storage</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-undo"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/disaster-recovery-as-a-service" className="mega-box-link">Disaster Recovery as a Service</Link>
-                </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-desktop"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/desktop-as-a-service" className="mega-box-link">Desktop as a Service</Link>
-                </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-video"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/video-surveillance-storage" className="mega-box-link">Video Surveillance Storage</Link>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -99,54 +111,66 @@ const MegaNavigation: React.FC<NavigationProps> = ({
               </div>
             </div>
             <div className="space-y-2">
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-warehouse"></i>
+              <Link href="/on-premise" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-warehouse"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Data Center Modernization</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/data-center-modernization" className="mega-box-link">Data Center Modernization</Link>
+              </Link>
+              <Link href="/on-premise" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-server"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Servers and Storage</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-server"></i>
+              </Link>
+              <Link href="/on-premise" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-desktop"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Virtual Desktops</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/servers-storage" className="mega-box-link">Servers and Storage</Link>
+              </Link>
+              <Link href="/on-premise" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-shield-alt"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Data Protection</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-desktop"></i>
+              </Link>
+              <Link href="/on-premise" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-network-wired"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Networking</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/virtual-desktops-vdi" className="mega-box-link">Virtual Desktops</Link>
+              </Link>
+              <Link href="/on-premise" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-lock"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Security</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-shield-alt"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/data-protection" className="mega-box-link">Data Protection</Link>
-                </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-network-wired"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/networking" className="mega-box-link">Networking</Link>
-                </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-lock"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/it-security" className="mega-box-link">Security</Link>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -163,54 +187,66 @@ const MegaNavigation: React.FC<NavigationProps> = ({
               </div>
             </div>
             <div className="space-y-2">
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-cloud"></i>
+              <Link href="/microsoft-azure" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-cloud"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Azure Cloud Platform</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/microsoft-azure" className="mega-box-link">Azure Cloud Platform</Link>
+              </Link>
+              <Link href="/microsoft-azure" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-server"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Azure Virtual Machines</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-server"></i>
+              </Link>
+              <Link href="/microsoft-azure" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-database"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Azure SQL Database</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/microsoft-azure" className="mega-box-link">Azure Virtual Machines</Link>
+              </Link>
+              <Link href="/microsoft-azure" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-shield-alt"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Azure Security Center</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-database"></i>
+              </Link>
+              <Link href="/microsoft-azure" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-network-wired"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Azure Networking</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/microsoft-azure" className="mega-box-link">Azure SQL Database</Link>
+              </Link>
+              <Link href="/microsoft-azure" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-chart-line"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Azure Analytics</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-shield-alt"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/microsoft-azure" className="mega-box-link">Azure Security Center</Link>
-                </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-network-wired"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/microsoft-azure" className="mega-box-link">Azure Networking</Link>
-                </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-chart-line"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/microsoft-azure" className="mega-box-link">Azure Analytics</Link>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -227,38 +263,46 @@ const MegaNavigation: React.FC<NavigationProps> = ({
               </div>
             </div>
             <div className="space-y-2">
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-cogs"></i>
+              <Link href="/solutions" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-cogs"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">AI Infrastructure as a Service</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/ai-infrastructure-as-a-service" className="mega-box-link">AI Infrastructure as a Service</Link>
+              </Link>
+              <Link href="/solutions" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-flask"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">AI Testing Environments</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-flask"></i>
+              </Link>
+              <Link href="/solutions" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-graduation-cap"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">Educational AI Platform</span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href="/ai-testing-environments" className="mega-box-link">AI Testing Environments</Link>
+              </Link>
+              <Link href="/solutions" className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className="fas fa-tachometer-alt"></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">AI Operations Center</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-graduation-cap"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/educational-ai-platform" className="mega-box-link">Educational AI Platform</Link>
-                </div>
-              </div>
-              <div className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className="fas fa-tachometer-alt"></i>
-                </div>
-                <div className="mega-box-content">
-                  <Link href="/ai-operations-center" className="mega-box-link">AI Operations Center</Link>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -276,30 +320,34 @@ const MegaNavigation: React.FC<NavigationProps> = ({
         <div className="grid grid-cols-2 gap-1 p-4 max-w-fit mx-auto">
           <div className="space-y-2">
             {leftColumn.map((item, index) => (
-              <div key={index} className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className={getIconForMenuItem(item.label)}></i>
+              <Link key={index} href={item.href} className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className={getIconForMenuItem(item.label)}></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">
+                      {item.label}
+                    </span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href={item.href} className="mega-box-link">
-                    {item.label}
-                  </Link>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="space-y-2">
             {rightColumn.map((item, index) => (
-              <div key={index} className="mega-dropdown-box">
-                <div className="mega-icon-circle mega-icon-circle-sm">
-                  <i className={getIconForMenuItem(item.label)}></i>
+              <Link key={index} href={item.href} className="block">
+                <div className="mega-dropdown-box">
+                  <div className="mega-icon-circle mega-icon-circle-sm">
+                    <i className={getIconForMenuItem(item.label)}></i>
+                  </div>
+                  <div className="mega-box-content">
+                    <span className="mega-box-link">
+                      {item.label}
+                    </span>
+                  </div>
                 </div>
-                <div className="mega-box-content">
-                  <Link href={item.href} className="mega-box-link">
-                    {item.label}
-                  </Link>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -363,8 +411,8 @@ const MegaNavigation: React.FC<NavigationProps> = ({
     )}>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
       
-      <nav className="flex justify-between items-center px-5 relative" style={{height: '80px'}}>
-        <Link href="/" className="flex items-center z-50">
+      <nav className="flex justify-between items-center px-8 md:px-12 lg:px-16 relative" style={{height: '80px'}}>
+        <Link href="/" className="flex items-center z-50 ml-8">
           <img 
             src="/logo.png" 
             alt="Logical Front" 
